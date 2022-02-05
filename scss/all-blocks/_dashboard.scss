@@ -1,0 +1,130 @@
+.dashboard {
+  padding: 100px 0;
+}
+
+.dashboard__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.dashboard__input {
+  display: block;
+  width: 230px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.dashboard__input--disabled {
+  animation: shake 0.4s;
+  animation-iteration-count: 1s;
+
+  &::placeholder {
+    font-weight: 700;
+    color: red;
+  }
+}
+
+.dashboard__input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button,
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+    opacity: 0;
+  }
+
+  background-image: url("../images/data-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 15px;
+}
+
+select.dashboard__input {
+  appearance: none;
+  background-image: url("../images/up.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 10px;
+}
+
+.dashboard__button {
+  width: 230px;
+  padding: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ff7010;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.dashboard__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 25px;
+  row-gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media only screen and(max-width: 510px) {
+  .dashboard {
+    padding: 50px 0;
+  }
+
+  .dashboard__input {
+    width: 100%;
+  }
+
+  .dashboard__button {
+    width: 100%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0.5px, 0.5px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-0.5px, -1px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-1.5px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(1.5px, 1px) rotate(0deg);
+  }
+  40% {
+    transform: translate(0.5px, -0.5px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-0.5px, 1px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-1.5px, 0.5px) rotate(0deg);
+  }
+  70% {
+    transform: translate(1.5px, 0.5px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-0.5px, -0.5px) rotate(1deg);
+  }
+  90% {
+    transform: translate(0.5px, 1px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0.5px, -1px) rotate(-1deg);
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>ShrekCinema</title>
+  </head>
+  <body>
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+      <div class="container">
+        <!-- Dashboard Form -->
+        <form class="dashboard__form" name="add-movie">
+          <input
+            class="dashboard__input"
+            type="text"
+            name="name"
+            placeholder="Name:"
+            autocomplete="off"
+          />
+
+          <input
+            class="dashboard__input"
+            type="text"
+            name="overview"
+            placeholder="Overview:"
+            autocomplete="off"
+          />
+
+          <input
+            class="dashboard__input"
+            type="text"
+            name="genres"
+            placeholder="Genres: Horror Action"
+            autocomplete="off"
+          />
+
+          <input
+            class="dashboard__input"
+            type="text"
+            name="poster"
+            placeholder="Poster: URL"
+            autocomplete="off"
+          />
+
+          <input
+            class="dashboard__input"
+            type="date"
+            name="date"
+            value="2000-02-20"
+            autocomplete="off"
+          />
+
+          <button class="dashboard__button" type="submit">Add new film</button>
+        </form>
+
+        <form class="dashboard__form" name="filter">
+          <input
+            class="dashboard__input"
+            type="text"
+            name="search"
+            placeholder="Search:"
+            autocomplete="off"
+          />
+
+          <select class="dashboard__input" name="select-genre"></select>
+
+          <select class="dashboard__input" name="select-sort">
+            <option value="a_z">A_Z</option>
+            <option value="z_a">Z_A</option>
+            <option value="new_old">New_Old</option>
+            <option value="old_new">Old_New</option>
+          </select>
+
+          <button class="dashboard__button" type="submit">Search</button>
+        </form>
+
+        <!-- Dashboard List -->
+        <ul class="dashboard__list"></ul>
+      </div>
+    </section>
+
+    <!-- TEMPLATES -->
+    <!-- MOVIE TEMPLATE -->
+    <template id="movie-template">
+      <li class="movie">
+        <img
+          class="movie__poster"
+          src="https://image.tmdb.org/t/p/w500/xnopI5Xtky18MPhK40cZAGAOVeV.jpg"
+          alt="Shazam!'s poster"
+          width="280"
+          height="420"
+        />
+
+        <div class="movie__info">
+          <h3 class="movie__title">Shazam!</h3>
+          <time class="movie__data" title="1970-01-19">(1970)</time>
+        </div>
+
+        <p class="movie__overview">
+          A boy is given the ability to become an adult superhero in times of need with a single
+          magic word.
+        </p>
+
+        <ul class="movie__genres">
+          <li class="genre">Action</li>
+          <li class="genre">Comedy</li>
+          <li class="genre">Fantasy</li>
+        </ul>
+      </li>
+    </template>
+
+    <script src="./js/films.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
